@@ -1,23 +1,23 @@
 class tableau1 extends Phaser.Scene{
 
     preload(){
-        this.load.image('Balle', 'game/cercle.png');
-        this.load.image('Murs', 'game/carre.png');
+        this.load.image('Balle', 'assets/cercle.png');
+        this.load.image('Murs', 'assets/carre.png');
 
 
     }
 
     create(){
-        this.hauteur = 500
-        this.largeur = 1000
+        this.hauteur = 800
+        this.largeur = 800
 
 
 
         this.Balle=this.physics.add.image( this.largeur/2-10,this.hauteur/2-10,  'Balle').setOrigin(0,0);
         this.Balle.setDisplaySize(20,20);
         this.Balle.body.setBounce(3,3);
-        this.Balle.setVelocityX(Phaser.Math.Between( -200,200));
-        this.Balle.setVelocityY(Phaser.Math.Between( -50,50));
+        this.Balle.setVelocityX(Phaser.Math.Between( 100,200));
+        this.Balle.setVelocityY(Phaser.Math.Between( 800,1000));
         this.Balle.setMaxVelocity(400,400);
 
 
@@ -28,49 +28,276 @@ class tableau1 extends Phaser.Scene{
         this.Haut.setImmovable(true);
 
 
-        this.Bas=this.physics.add.image(0,this.hauteur-20, 'Murs').setOrigin(0,0);
-        this.Bas.setDisplaySize(this.largeur,20);
+        this.Bas=this.physics.add.image(0,20, 'Murs').setOrigin(0,0);
+        this.Bas.setDisplaySize(20,800);
+
+
         this.Bas.body.setAllowGravity(false);
         this.Bas.setImmovable(true);
 
 
-        this.gauche=this.physics.add.image(50,200, 'Murs').setOrigin(0,0);
-        this.gauche.setDisplaySize(20,100);
+        this.droite=this.physics.add.image(780,20, 'Murs').setOrigin(0,0);
+        this.droite.setDisplaySize(20,800);
+        this.droite.body.setAllowGravity(false);
+        this.droite.setImmovable(true);
+
+        /// Blocs 1
+
+
+        this.gris=this.physics.add.image(162,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(224,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(286,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(348,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(410,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(472,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(534,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(596,100, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+
+
+        /// Bloc 2
+
+        this.gris=this.physics.add.image(162,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(224,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(286,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(348,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(410,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(472,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30)
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(534,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(596,132, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        /// Bloc 3
+        this.gris=this.physics.add.image(162,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(224,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(286,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(348,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(410,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(472,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30)
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(534,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(596,164, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+
+
+        /// Bloc 4
+        this.gris=this.physics.add.image(162,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(224,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(286,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(348,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(410,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(472,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30)
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(534,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(596,196, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+
+
+
+        ///Bloc 5
+        this.gris=this.physics.add.image(162,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(224,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(286,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(348,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(410,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(472,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30)
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(534,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+        this.gris=this.physics.add.image(596,228, 'Murs').setOrigin(0,0);
+        this.gris.setDisplaySize(60,30);
+        this.gris.body.setAllowGravity(false);
+        this.gris.setImmovable(true);
+
+
+
+
+        ///Player
+
+        this.gauche=this.physics.add.image(400,700, 'Murs').setOrigin(0,0);
+        this.gauche.setDisplaySize(200,20);
         this.gauche.body.setAllowGravity(false);
         this.gauche.setImmovable(true);
 
 
-        this.droite=this.physics.add.image(this.largeur-70,200, 'Murs').setOrigin(0,0);
-        this.droite.setDisplaySize(20,100);
-        this.droite.body.setAllowGravity(false);
-        this.droite.setImmovable(true);
 
 
-        this.data.set('j1', 0);
-        this.data.set('j2', 0);
 
-        this.J1 = this.add.text(100, 30, '', { font: '40px Courier', fill: '#808080' });
-        this.J1.setText([
-            'J1: ' + this.data.get('j1')
+        this.data.set('vies', 3);
+        this.data.set('points', 0);
+
+        this.vies = this.add.text(50, 30, '', { font: '40px Courier', fill: '#808080' });
+        this.vies.setText([
+            'Vies: ' + this.data.get('vies')
         ]);
 
-        this.J2 = this.add.text(800, 30, '', { font: '40px Courier', fill: '#808080' });
-        this.J2.setText([
-            'J2: ' + this.data.get('j2')
+
+        this.points = this.add.text(500, 30, '', { font: '40px Courier', fill: '#808080' });
+        this.points.setText([
+            'points: ' + this.data.get('points')
         ]);
 
         let me = this;
 
+
+
         this.physics.add.collider(this.Balle,this.Bas);
         this.physics.add.collider(this.Balle,this.Haut);
+        this.physics.add.collider(this.Balle,this.droite);
+        this.physics.add.collider(this.Balle,this.gris);
+
         this.physics.add.collider(this.Balle,this.gauche, function() {
             console.log('touche gauche');
             me.rebond(me.gauche)
         });
-        this.physics.add.collider(this.Balle,this.droite, function() {
-            console.log('touche droite');
-            me.rebond(me.droite)
-        });
+
 
         this.initKeyboard();
 
@@ -79,9 +306,9 @@ class tableau1 extends Phaser.Scene{
     rebond(raquette){
         let me = this;
 
-        console.log(raquette.y);
-        console.log(me.Balle.y);
-        console.log(me.Balle.y-raquette.y)
+        console.log(raquette.x);
+        console.log(me.Balle.x);
+        console.log(me.Balle.x-raquette.x)
 
     }
 
@@ -89,34 +316,29 @@ class tableau1 extends Phaser.Scene{
         let me = this;
         this.input.keyboard.on('keyup', function (kevent) {
             switch (kevent.keyCode) {
-                case Phaser.Input.Keyboard.KeyCodes.S:
-                    me.gauche.setVelocityY(0);
+                case Phaser.Input.Keyboard.KeyCodes.RIGHT:
+                    me.gauche.setVelocityX(0);
                     break;
-                case Phaser.Input.Keyboard.KeyCodes.J:
-                    me.droite.setVelocityY(0);
+
+
+                case Phaser.Input.Keyboard.KeyCodes.LEFT:
+                    me.gauche.setVelocityX(0);
+                    me.gauche.setVelocityX(0);
                     break;
-                case Phaser.Input.Keyboard.KeyCodes.X:
-                    me.gauche.setVelocityY(0);
-                    break;
-                case Phaser.Input.Keyboard.KeyCodes.N:
-                    me.droite.setVelocityY(0);
-                    break;xx
+
             }
         })
         this.input.keyboard.on('keydown', function (kevent) {
             switch (kevent.keyCode) {
-                case Phaser.Input.Keyboard.KeyCodes.S:
-                    me.gauche.setVelocityY(-500);
+                case Phaser.Input.Keyboard.KeyCodes.LEFT:
+                    me.gauche.setVelocityX(-500);
                     break;
-                case Phaser.Input.Keyboard.KeyCodes.J:
-                    me.droite.setVelocityY(-500);
+
+
+                case Phaser.Input.Keyboard.KeyCodes.RIGHT:
+                    me.gauche.setVelocityX(500);
                     break;
-                case Phaser.Input.Keyboard.KeyCodes.X:
-                    me.gauche.setVelocityY(500);
-                    break;
-                case Phaser.Input.Keyboard.KeyCodes.N:
-                    me.droite.setVelocityY(500);
-                    break;
+
             }
 
         })
@@ -141,18 +363,13 @@ class tableau1 extends Phaser.Scene{
             this.Balle.y = this.hauteur
         }
 
-        if (this.gauche.y<20){
-            this.gauche.y = 20
+        if (this.gauche.x<0){
+            this.gauche.x = 0
         }
-        if (this.gauche.y>this.hauteur-120){
-            this.gauche.y =this.hauteur-120
+        if (this.gauche.x>this.hauteur-200){
+            this.gauche.x =this.hauteur-200
         }
-        if (this.droite.y<20){
-            this.droite.y = 20
-        }
-        if (this.droite.y>this.hauteur-120){
-            this.droite.y =this.hauteur-120
-        }
+
 
     }
 
